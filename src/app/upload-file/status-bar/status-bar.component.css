@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "GothamBook";
+    src: url(../../../assets/Gotham-Book.otf) format("truetype"),
+    url("../../../assets/Gotham-Book.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "GothamXLight";
+    src: url(../../../assets/Gotham-XLight.otf) format("truetype"),
+    url("../../../assets/Gotham-XLight.otf") format("truetype");
+  }
+
+
+.status-bar-container {
+    margin-top: 20px;
+    width: 500px;
+
+}
+
+.status-bar-header {
+    display: inline-block;
+    width: 480px;
+}
+
+.status-bar-text {
+    font-family: 'GothamBook';
+    font-size: 15px;
+}
+
+.status-bar-text-span {
+    font-family: 'GothamXLight';
+    font-size: 15px;
+}
+.bin-container {
+    display: inline-block;
+    width: 20px;
+}
+
+.success-icon {
+    width: 16.3px;
+    height: 12.02px;
+    margin-right: 5px;
+}
+
+.error-icon {
+    width: 10.49px;
+    height: 10.49px;
+    margin-right: 5px;
+}
+
+.bin-icon {
+    width: 17.5px;
+    height: 19.5px;
+    cursor: pointer;
+}
+.bin-icon:hover {
+    opacity: 0.5;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #DEDBD4;
+    border-radius: 10px;
+
+}
+.in-progress{
+  display: block;
+  height: 12px;
+  border-radius: 10px;
+  animation: progress-animation 1s linear forwards;
+}
+
+@keyframes progress-animation {
+  from {
+    width: 0%;
+    background-color: #E10514;
+  }
+  to {
+    background-color: #E10514;
+  }
+}
+  
+
+.status-bar-footer {
+    font-family: 'GothamLight';
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: #575757;
+  }
+
+  .error-desc{    
+    font-family: 'GothamLight';
+    font-size: 13px;
+    letter-spacing: -0.3px;    
+    color: #E10514;
+    
+  }

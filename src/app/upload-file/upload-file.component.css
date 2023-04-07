@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "GothamLight";
+    src: url(../../assets/Gotham-Light.otf) format("truetype"),
+    url("../../assets/Gotham-Light.otf") format("truetype");
+}
+
+.upload-section{
+    width: 500px;
+    margin-bottom: 10px;
+
+}
+
+.upload-heading {
+    font-family: 'GothamLight';
+    font-size: 15px;
+    color: #1D1D1B;
+}
+
+.upload-limit {
+    font-family: 'GothamLight';
+    font-size: 13px;
+    line-height: 12px;
+    text-transform: capitalize;
+    color: #979797;
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+}
+
+.upload-counter {
+    display: inline-block;
+    width: 250px;
+    font-family: 'GothamLight';
+    font-size: 13px;
+    text-align: right;
+    text-transform: capitalize;
+    color: #979797;
+}
+
+.file-upload-container {
+    border: 1px dashed #DEDBD4;
+    border-radius: 15px;
+    width: 500px;
+    height: 71px;
+    background: #FFFFFF;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.file-upload-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.add-document{
+    width: 34px;
+    height: 34px;
+}
+
+.upload-text {
+    display: inline-block;
+    font-family: 'GothamLight';
+    font-size: 14px;
+    color: black;
+    margin-left: 10px;
+}
+
+.file-upload-footer-text {
+    font-family: 'GothamLight';
+    font-size: 12px;
+    text-align: center;
+    color: #979797;
+}

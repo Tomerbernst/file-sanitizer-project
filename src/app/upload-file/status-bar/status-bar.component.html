@@ -1,0 +1,20 @@
+<div *ngFor="let item of fileListData; let i = index" class="status-bar-container" id="{{item.fileID}}">
+    <div class="status-bar-header">
+        <p class="status-bar-text">
+            <img *ngIf="item.isSuccess && item.isComplete"  class="success-icon" src="../../../assets/success-icon.png">
+            <img *ngIf="!item.isSuccess && item.isComplete" class="error-icon" src="../../../assets/error-icon.png"/>
+            <span [ngStyle]="{'color': !item.isSuccess && item.isComplete ? '#E10514': '#000000'}">{{item.name}}</span>
+            <span [ngStyle]="{'color': !item.isSuccess && item.isComplete ? '#E10514': '#575757'}" class="status-bar-text-span"> {{item.size}}</span>
+        </p>
+    </div>
+    <div class="bin-container" *ngIf="item.isComplete">
+      <img class="bin-icon" src="../../../assets/bin.png" (click)="deleteFile(i)"/>
+    </div>
+    <div class="progress-bar" *ngIf="!item.isComplete">
+      <span class="in-progress" [style.width.%]="item.progress" [@progressAnimation]="{ value: '*', params: { duration: getDuration(item.progress) } }"></span>
+    </div>
+    <br />
+    <div class="status-bar-footer" *ngIf="!item.isComplete">Lorem Ipsum...</div>
+    <div class="error-desc" *ngIf="!item.isSuccess && item.isComplete">{{item.errorDetails}}</div>
+  </div>
+  

@@ -1,0 +1,18 @@
+<div class="upload-section">
+    <p class="upload-heading">Upload Supporting Documents</p>
+    <div class="upload-limit">Maximum file size: 10MB</div>
+    <div class="upload-counter">{{fileListData.length}}/{{MAX_FILES}} files uploaded</div>
+</div>
+<div class="file-upload-container" (click)="fileUpload.click()">
+    <div class="file-upload-content">
+        <img class="add-document" src="../../assets/add-document.png">
+        <p class="upload-text">Upload Documents</p>
+    </div>
+    <div class="file-upload-footer">
+        <p class="file-upload-footer-text">Png, Jepg, Jpg, Pdf, Word, Txt, Excel, Pdf</p>
+    </div>
+    <input multiple #fileUpload type="file" class="file-upload-input"  accept=".png,.jpeg,.jpg,.pdf,.doc,.docx,.txt,.xls,.xlsx" hidden  (change)="handleFileInput($event)">
+</div>
+
+<app-status-bar [fileListData]="fileListData"></app-status-bar>
+
